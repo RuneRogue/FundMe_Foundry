@@ -7,7 +7,8 @@ import {HelperConfig} from "./HelperConfig.s.sol";
 
 contract DeployFundMe is Script {
     FundMe public fundMe;
-    function run() public returns (FundMe){
+
+    function run() public returns (FundMe) {
         HelperConfig helperConfig = new HelperConfig();
         address priceFeed = helperConfig.activeNetworkConfig();
         vm.startBroadcast();
